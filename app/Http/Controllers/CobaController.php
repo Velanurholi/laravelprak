@@ -39,12 +39,12 @@ class CobaController extends Controller
     }
 
 
-    public function test ($datas)
+    public function data ($test)
     {
-        $koplak =	['binatang'=> ['singa','ular','kelinci','kucing','kuda'],
+        $dutaa =	['binatang'=> ['singa','ular','kelinci','kucing','kuda'],
     			    'kendaraan' => ['motor','mobil','kereta','pesawat','bus'],
     				'laptop' => ['asus','lenovo','acer','apple','axioo']];
-    	$ahaha = $koplak [$datas];
+    	$ahaha = $dutaa [$test];
     	return view ('data', compact('ahaha'));
     }
 

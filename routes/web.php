@@ -28,4 +28,4 @@ Route::get('/', function () {
 Route::get('tes', 'CobaController@indexx' );
 Route::get('coba5', 'CobaController@percobaan5' );
 Route::get('namas', 'CobaController@namasiswa' );
-Route::get('apa/{datas}', 'CobaController@test' );
+Route::get('/{test}', 'CobaController@data' );
