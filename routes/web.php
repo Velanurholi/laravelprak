@@ -25,7 +25,8 @@ Route::get('/', function () {
 // Route::get('/{id}', 'PrakerinController@parameter' );
 // Route::get('test1', 'CobaController@test' );
 // Route::get('testt/{id}', 'CobaController@test2' );
-Route::get('tes', 'CobaController@indexx' );
-Route::get('coba5', 'CobaController@percobaan5' );
-Route::get('namas', 'CobaController@namasiswa' );
-Route::get('/{test}', 'CobaController@data' );
+// Route::get('tes/{a}', 'CobaController@indexx' );
+// Route::get('coba5', 'CobaController@percobaan5' );
+// Route::get('namas', 'CobaController@namasiswa' );
+// Route::get('/{test}', 'CobaController@data' );
+Route::resource('post','PostController');

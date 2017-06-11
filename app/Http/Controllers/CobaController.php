@@ -20,32 +20,33 @@ class CobaController extends Controller
     	return $c;
     }
 
-    public function indexx ()
+    public function indexx ($a)
     {
-    	$tampilan =  Coba::all ();
-    	return view ('indexx', compact('tampilan'));
+        $tampilan =  Coba::find ('$jurusan');
+    	$tampilan =  Coba::where ('nama','like','%'.$a.'%')-> orwhere ('jurusan','like','%'.$a.'%')->get();
+    	return $tampilan;
     }
 
-    public function percobaan5 ()
-    {
-    	$buah =  ['mangga','jeruk','apel','anggur','manggis'];
-    	return view ('buah', compact('buah'));
-    }
+    // public function percobaan5 ()
+    // {
+    // 	$buah =  ['mangga','jeruk','apel','anggur','manggis'];
+    // 	return view ('buah', compact('buah'));
+    // }
 
-     public function namasiswa ()
-    {
-    	$nama =  ['vela','lala','lili','lele','lulu'];
-    	return view ('nama', compact('nama'));
-    }
+    //  public function namasiswa ()
+    // {
+    // 	$nama =  ['vela','lala','lili','lele','lulu'];
+    // 	return view ('nama', compact('nama'));
+    // }
 
 
-    public function data ($test)
-    {
-        $dutaa =	['binatang'=> ['singa','ular','kelinci','kucing','kuda'],
-    			    'kendaraan' => ['motor','mobil','kereta','pesawat','bus'],
-    				'laptop' => ['asus','lenovo','acer','apple','axioo']];
-    	$ahaha = $dutaa [$test];
-    	return view ('data', compact('ahaha'));
-    }
+    // public function data ($test)
+    // {
+    //     $dutaa =	['binatang'=> ['singa','ular','kelinci','kucing','kuda'],
+    // 			    'kendaraan' => ['motor','mobil','kereta','pesawat','bus'],
+    // 				'laptop' => ['asus','lenovo','acer','apple','axioo']];
+    // 	$ahaha = $dutaa [$test];
+    // 	return view ('data', compact('ahaha'));
+    // }
 
 }

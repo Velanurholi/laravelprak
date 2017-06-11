@@ -5,8 +5,8 @@
 </head>
 <body>
 
-@foreach($ahaha as $test)
-<li> {{$test}} </li>
+@foreach($ahaha as $dataa)
+<li> {{$dataa}} </li>
 @endforeach
 </body>
 </html>
